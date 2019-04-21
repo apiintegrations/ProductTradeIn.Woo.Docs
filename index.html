@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Documentation | WooCommerce Trade-In</title>
+<link rel="alternate" type="application/rss+xml" title="frittt.com" href="feed/index.html">
+<link href="http://fonts.googleapis.com/css?family=Raleway:700,300" rel="stylesheet"
+        type="text/css">
+<link rel="stylesheet" href="css/style.css?v=3">
+<link rel="stylesheet" href="css/prettify.css">
+</head>
+<body>
+<div class="wrapper">
+<nav>
+ 
+  	<div class="pull-left">
+    	<h1><a href="http://APIintegrations.com/"><img src="http://apiintegrations.com/wp-content/uploads/2016/06/api-logo-web-250-50-4.png" alt="API Integrations" /> <span></span></a></h1>
+    </div>
+    
+    <div class="pull-right">
+    	<a href="#" target="_blank" class="btn btn-download"><img src="http://apiintegrations.com/wp-content/uploads/2014/10/woo-trade-in-icon-80x80.png" width="25" alt="Woo Trade-In" /> Purchase</a>
+    </div>
+
+</nav>
+<header>
+  <div class="container">
+    <h2 class="lone-header text-center">WooCommerce Products Trade-In Plugin Documentation (Version: 1.0.0)</h2>
+  </div>
+</header>
+<section>
+  <div class="container">
+    <ul class="docs-nav">
+      <!--<li><strong>Getting Started</strong></li>-->
+      <li><a href="#welcome" class="cc-active">Welcome</a></li>
+        <li><a href="#installation" class="cc-active">Installation</a></li>
+        <li><a href="#quickstart" class="cc-active">Quick Start</a></li>
+      <li><a href="#easypost" class="cc-active">EasyPost.com Setup</a></li>
+      <li><a href="#pluginsettings" class="cc-active">Plugin Settings</a></li>
+      <li class="separator"></li>
+      <!--<li><strong>Customization</strong></li>-->
+      <li><a href="#createproduct" class="cc-active">Creating a Product</a></li>
+      <li><a href="#orders" class="cc-active">Processing Orders</a></li>
+      <li><a href="#cancellabel" class="cc-active">Cancelling Shipments</a></li>
+      <li class="separator"></li>
+      <li><a href="#tips" class="cc-active">Helpful Tips</a></li>
+
+    </ul>
+
+    <div class="docs-content">
+      <h2> Getting Started</h2>
+      <h3 id="welcome"> Welcome</h3>
+        <span><strong>Plugin Requirements:</strong> Wordpress (4.0+), WooCommerce (2.6+), EasyPost.com Account</span>
+        <br/>
+        <span><strong>Plugin Overview:</strong> What you can do with this plugin:</span>
+        <p>WooCommerce Product Trade-In Plugin allows you to upload items that your visitors will be able to sell to you based on conditional pricing you can set just like any other regular WooCommerce product. Setting an item as a trade-in item is as easy as clicking a checkbox when creating a new item. Then you can set the pricing based on how much you are offering for this particular product. Visitors will be able to browse your trade-in items and if they accept the offer (pricing you have set), they will fill out a simple form which will then lead them to instructions on how to send in their item.</p>
+        <span><strong>Documentation Overview:</strong> What we will be covering in the documentation:</span>
+      
+      <p> This documentation will walk you through how to upload and activate the WooCommerce Product Trade-In plugin. It will also cover how to set up the proper settings for creating a trade-in product. Tying in your EasyPost.com account to create shipping labels. How to process trade-in orders along with other helpful tips.</p>
+      <!--<ul>
+        <li>See how many visitors like the new design of your website or logo</li>
+        <li>Analyze what your readers want to see on your blog</li>
+        <li>Understand how helpful the content on your support forum or website is</li>
+        <li>Know the latest trends and user’s opinion before launching a new product or service</li>
+      </ul>-->
+      <!--<p> Opineo allows you to do all of this and much more without signing up for an account
+        or hire an expert. This DIY tool enables you to listen to your customers’ voice
+        easily and instantly. All you have to do is go online, design your widget and place
+        it on your website. 
+     </p>-->
+
+        <hr>
+      <h3 id="installation"> Installation</h3>
+      <ul>
+        <li>
+            Option 1 via FTP
+            <ol>
+                <li>Extract the .ZIP archive from Codecanyon to a local folder on your PC.</li>
+                <li>Upload the extracted WooCommerce Product Trade-In plugin folder along with all its contents to '/wp-content/Plugins' directory using an FTP client.</li>
+                <li>Login to your WordPress admin dashboard and click on the Plugins link on the left hand menu.</li>
+                <li>Locate the WooCommerce Product Trade-In Plugin and click <b>Activate</b></li>
+            </ol>
+        </li>
+        <li>
+            Option 2 via Plugin Installer
+            <ol>
+                <li>Login to your WordPress Admin Panel and open the <b>Plugins</b> panel by clicking on plugins on the left hand menu.</li>
+                <li>Click <b>Add New</b> and click on it.</li>
+                <li>Look for the <b>Upload Plugin</b> button towards the top of the page and click on it.</li>
+                <li>Browse for the WooTradeIn.zip file you downloaded locally and upload it.
+                    <img src="screenshot/ice_screenshot_20160704-201414.png" />
+                </li>
+                <li>After successfully uploading the plugin you must now activate it.</li>
+            </ol>
+        </li>
+      </ul>
+        <p>Once the plugin has been installed you must check to make sure that two pages have automatically been created.</p>
+        <ol>
+            <li>A page titled: <strong>Trade-In</strong>
+                <ul>
+                    <li>If you do not see this page you must add a new page by going into Pages-> Add New. Then in the body please insert the following short code -> [trade-in] -> then publish the page.</li>
+                </ul>
+            </li>
+            <li>A Page titled: <strong>Trade-In Confirmation</strong>
+                <ul>
+                    <li>If you do not see this page you must add a new page by going into Pages-> Add New. Then in the body please insert the following short code -> [trade-in-confirmation] -> then publish the page.</li>
+                </ul>
+            </li>
+
+        </ol>
+        <hr>
+    <h3 id="quickstart"> Quickstart</h3>
+    <p>Once the Plugin is successfully installed you can begin to create trade-in items with no extra work as you would create any regular WooCommerce Product.</p>
+        <ul>
+            <li>
+                Create Product
+                <ol>
+                    <li>In your Wordpress Admin visit Products -> Add New Product.</li>
+                    <li>Select the checkbox indicating this is a trade-in product.
+                        <img src="screenshot/trade-in-check.png">
+                    </li>
+                    <li>
+                        <span>Once you publish the new product you should be able to see it on your shop page, similar to the item below for creating an EasyPost.com account.</span>
+                        <div>
+                            <img src="screenshot/shop-page.png">
+                        </div>
+                        
+                    </li>
+                    <li>The customer can now click the Get Offer button and continue with the process.</li>
+                </ol>
+            </li>
+    
+        </ul>
+        <p>Getting started is as simple as that. However if you would like to create automatic shipping labels you must continue with this documentation and instructions below.</p>
+  
+        <hr>
+      <h3 id="easypost"> EasyPost.com Setup</h3>
+      <p> In order to automatically create shipping labels your customers can print for shipping in their product you must create an EasyPost.com account and activate your API key.</p>
+        <ol>
+            <li>Visit <a href="http://easypost.com/signup" target="_blank">EasyPost.com </a>to create an account.</li>
+            <li>Visit your <a href="https://www.easypost.com/account#/api-keys" target="_blank"> Dashboard</a>and make note of your API Key. We will use these later to setup the plugin.
+                <img src="screenshot/easypostkeys.png" />
+            </li>
+        </ol>
+      <hr>
+      <h3 id="pluginsettings"> Plugin Settings</h3>
+        <p>Lets take a look at setting up your plugins settings to ensure a successful flow when allowing users to trade-in products.</p>
+        <ol>
+            <li>
+                <p>In your WordPress admin panel go ahead and click on WooCommerce Settings in the left hand panel.</p>
+                <img src="screenshot/woo-settings.png" />
+            </li>
+            <li>
+                Click on the Products Tab at the top of the page. Then go ahead and click on the WooCommerce Trade-In link underneath.
+                <img src="screenshot/product-settings-tab.png" />
+            </li>
+            <li>
+                You should be presented with a screen like the image below.
+                <img src="screenshot/trade-in-settings.png" />
+            </li>
+            <li>
+                Copy your API key from the <a href="https://www.easypost.com/account#/api-keys" target="_blank"> easypost.com Dashboard</a> we viewed from the step above.
+                <ul>
+                    <li>BE SURE TO BE USING YOUR TEST KEY WHEN TESTING (RECOMMENDED AT FIRST).</li>
+                    <li>BE SURE TO SWITCH TO YOUR PRODUCTION KEY WHEN YOU ARE READY TO GO LIVE.</li>
+                </ul>
+            </li>
+            <li>
+                <span style="color:red;">Please be sure to fill out ALL of the other fields in order to successfully use the plugin.</span>
+            </li>
+        </ol>
+      <!--<pre class="prettyprint">&lt;script&gt;
+    $(document).ready(function (){
+    $('#MiniView').opineo('results.php', {curvalue:0, view: 'mini', callback: myCallback});
+    })	
+&lt;/script&gt;</pre>-->
+        <hr />
+      <h2>Products Section</h2>
+      <h3 id="createproduct"> Creating a Product</h3>
+        <p>Creating a product is extremely easy, lets look at how we can create a trade-in item.</p>
+      <ol>
+        <li>In your Wordpress Admin visit Products -> Add New Product.</li>
+        <li>You can then choose a simple or variable Product Type. For the purpose of this demo we will use a variable product type. </li>
+        <li>Select the checkbox indicating this is a trade-in product
+          <img src="screenshot/trade-in-check.png" />
+          </li>
+          <li>If you would like to give different pricing based on conditions or colors or other product variables you must first create attributes. You may use 
+          <a href="https://docs.woothemes.com/document/variable-product/" target="_blank">this</a> tutorial if you are unfamiliar with creating variable attributes for products.</li>
+          <li>Below you can see an example of a trade-in item with these attributes: Carrier, Color, Storage, Condition.
+          <img src="screenshot/variable-product.png" /></li>
+          <li>The pricing you enter is indicating how much you are offering to pay for the item.</li>
+          <li>If all settings have been successfully filled out and you have created a trade-in product you should be able to now test out your trade-in item flow and see a shipping label being generated.</li>
+      </ol>
+
+      <h3 id="orders"> Processing Orders</h3>
+        <p>Let's take a look at what happens when a customer puts in an order to trade-in their item.</p>
+        <ol>
+            <li>Customers should be able to see trade-in items in your shop similar to the image below.
+                <img src="screenshot/shop-page.png" />
+            </li>
+            <li>Once they select all possible options they will see the 'Sell Now'* button.
+            <img src="screenshot/details-pahe.png" /></li>
+            <li>Next they will be promted to fill out their info along with how they would like to get paid.
+            <img src="screenshot/checkout.png" />
+            </li>
+            <li>Once they have successfully filled out all fields they will be presented with their shipping label, which they will need to print and ship the item.
+                <img src="screenshot/confirmation.png" />
+            </li>
+            <li>You will also see the order under WooCommerce -> Orders. The order will have an awaiting shipment icon and a Trade In green check mark indicating this is a trade-in order.
+                <img src="screenshot/order-status.png" />
+            </li>
+            <li>
+                Clicking into the order. Under the Custom Fields section you will see the Payment Method chosen by the customer. If PayPal was chosen you will also see their PayPal email address, along with a link to the shipping label that was created.
+                <img src="screenshot/order-details.png" />
+            </li>
+            <li>
+                You may also view all your shipment/label info by visiting your EasyPost.com <a href="https://www.easypost.com/account#/shipments" target="_blank">dashboard.</a>
+            </li>
+        </ol>
+
+      <h3 id="cancellabel"> Cancelling Shipments</h3>
+        <p>You may choose to offer customers a certain amount of time to ship their products. If you choose to cancel the shipment and be refunded the cost of the label you must visit your <a href="https://www.easypost.com/account#/shipments" target="_blank">dashboard.</a></p>
+        <ol>
+            <li>Once you have gone to your EasyPost.com <a href="https://www.easypost.com/account#/shipments" target="_blank">dashboard</a>. Locate the shipment you are wanting to cancel.</li>
+            <li>Click the Refund link for that shipment.</li>
+            <li>Confirm the Refund.</li>
+        </ol>
+    <hr/>
+      <h3 id="tips"> Tips</h3>
+      <ul>
+        <li>Please visit <a href="https://www.easypost.com/" target="_blank">EasyPost.com </a>for help related to their systems.</li>
+          <li>It is suggested to create a seperate Product Category for all trade-in items, although not required.</li>
+          <li>If you don't see the correct button text this may be due to your themes styling. *Depending on your support package we may be able to help you with this.</li>
+          <li>If you would like to add more payment options please let us know by emailing us. *Depending on your support package we may be able to help you with this.</li>
+          <li>For any and all support please email us at <a href="mailto:support@apiintegrations.com">support@apiintegrations.com</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="vibrant centered">
+  <div class="">
+    <h4> You can purchase this plugin at <a href="#" target="_blank">WooCommerce Product Trade-In</a>.</h4>
+  </div>
+</section>
+<footer>
+  <div class="">
+    <p> &copy; Copyright API Integrations. All Rights Reserved.</p>
+  </div>
+</footer>
+</div>
+<script src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/prettify/prettify.js"></script> 
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+<script src="js/layout.js"></script>
+</body>
+</html>
